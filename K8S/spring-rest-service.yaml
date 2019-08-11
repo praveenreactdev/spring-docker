@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  spring-service
+spec:
+  selector:
+    app:  backend
+  type:  NodePort
+  ports:
+  - name:  backend-port
+    port:  80
+    nodePort: 31000
+    targetPort:  8080
